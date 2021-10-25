@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/carrinho.css" />
+    <link
+      href="font/fontawesome-free-5.15.4-web/css/all.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <title>Mariana's Café - Carrinho</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo_2.png" alt="" />
+        </a>
+      </div>
+
+      <a class="cart-icon" href="carrinho.html">
+        <img src="img/shopping-cart.png" alt="Carrinho" />
+        <span id="produtosQuant">(0)</span>
+      </a>
+    </div>
+    <div class="tabela-container">
+      <a href="index.html#section3" class="voltar">< Voltar</a>
+      <h1>Carrinho de compras</h1>
+      <table id="tabela-carrinho"></table>
+      <div class="linha-total">
+        <div class="flex-5">
+          <h1>TOTAL</h1>
+        </div>
+        <div class="flex-1 divisor-total">|</div>
+        <div class="flex-2">
+          <h1 id="valorTotal"></h1>
+        </div>
+        <div class="flex-1 divisor-total">|</div>
+        <div class="flex-2">
+          <div class="finalizar">
+            <button id="botaoModal">Finalizar pedido</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h1>Finalizar pedido</h1>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-content">
+          <div class="lado-esquerdo">
+            <div class="flex-row">
+              <div class="flex-1">
+                <label for="nome">Nome completo</label><br />
+                <input name="nome" type="text" />
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-1">
+                <label for="cpf">CPF/CNPJ</label><br />
+                <input name="cpf" id="cpfMask" type="text" />
+              </div>
+              <div class="flex-1" style="margin-left: 30px">
+                <label for="telefone">Telefone</label><br />
+                <input name="telefone" id="telefoneMask" type="text" />
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-1">
+                <label for="email">E-mail</label><br />
+                <input name="email" type="text" />
+                <span id="mensagem-erro"></span>
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-2">
+                <label for="endereco">Endereço</label><br />
+                <input name="endereco" type="text" />
+                <span id="mensagem-erro"></span>
+              </div>
+              <div class="flex-1" style="margin-left: 30px">
+                <label for="complemento">Complemento</label><br />
+                <input name="complemento" type="text" />
+                <span id="mensagem-erro"></span>
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-1">
+                <label for="cep">CEP</label><br />
+                <input name="cep" id="cepMask" type="text" />
+              </div>
+              <div class="flex-1" style="margin-left: 30px">
+                <label for="uf">UF</label><br />
+                <select id="estado" name="estado">
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-1">
+                <label for="cidade">Cidade</label><br />
+                <input name="cidade" type="text" />
+              </div>
+              <div class="flex-1" style="margin-left: 30px">
+                <label for="bairro">Bairro</label><br />
+                <input name="bairro" type="text" />
+              </div>
+            </div>
+          </div>
+          <div class="divisor">
+            <div class="divisor-form"></div>
+          </div>
+          <div class="lado-direito">
+            <div class="flex-row">
+              <div class="flex-1">
+                <label for="pagamento">Método de pagamento</label><br />
+                <select
+                  name="pagamento"
+                  id="metodoPagamento"
+                  onchange="validaFormulario(this.value)"
+                >
+                  <option value="bol">Boleto</option>
+                  <option value="car">Cartão</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="form-cartao">
+              <div class="flex-row">
+                <div class="flex-1">
+                  <label for="numCartao">Número do cartão</label><br />
+                  <input name="numCartao" id="numCartao" type="text" />
+                </div>
+              </div>
+
+              <div class="flex-row">
+                <div class="flex-1">
+                  <label for="dtVenc">Data vencimento</label><br />
+                  <input name="dtVenc" id="dataVenc" type="text" />
+                </div>
+                <div class="flex-1" style="margin-left: 30px">
+                  <label for="codigo">CVC ou CVV</label><br />
+                  <input name="codigo" id="codigoCartao" type="text" />
+                </div>
+              </div>
+
+              <div class="flex-row">
+                <div class="flex-1">
+                  <label for="nome">Nome impresso no cartão</label><br />
+                  <input name="nome" type="text" />
+                </div>
+              </div>
+
+              <div class="flex-row">
+                <div class="flex-1">
+                  <label for="parcelamento">Número de parcelas</label><br />
+                  <select name="parcelamento" id="parcelamento"></select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button onclick="finalizarPedido()">Finalizar pedido</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/carrinho.js"></script>
+
+    <script>
+      $("input[id*='cpfMask']").inputmask({
+        mask: ['999.999.999-99', '99.999.999/9999-99'],
+        keepStatic: true,
+      });
+
+      $("input[id*='telefoneMask']").inputmask({
+        mask: ['(99) 99999-9999'],
+        keepStatic: true,
+      });
+
+      $("input[id*='cepMask']").inputmask({
+        mask: ['99999-999'],
+        keepStatic: true,
+      });
+
+      $("input[id*='numCartao']").inputmask({
+        mask: ['9999 9999 9999 9999'],
+        keepStatic: true,
+      });
+
+      $("input[id*='dataVenc']").inputmask({
+        mask: ['99/99'],
+        keepStatic: true,
+      });
+
+      $("input[id*='codigoCartao']").inputmask({
+        mask: ['999'],
+        keepStatic: true,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Black Tucano Premium Blend - 250g",
+    "Imagem": "https://cdn.shopify.com/s/files/1/0167/0751/8528/products/PREMIUMBLENDFUNDOBRANCO_2048x2048.png?v=1620223951",
+    "Descricao": "Blend de grãos especiais, resultando em uma deliciosa combinação de cafés de diferentes origens",
+    "Marca": "Black Tucano Coffee Roasters",
+    "Preco": 25.9
+  },
+  {
+    "Id": 2,
+    "Nome": "Black Tucano Single Origin - 250g",
+    "Imagem": "https://cdn.shopify.com/s/files/1/0167/0751/8528/products/SINGLEORIGINFUNDOBRANCO_2048x2048.png?v=1630526775",
+    "Descricao": "Grãos de origem única, cultivados por uma única fazenda ou produtor, com pontuação SCA acima de 86 pontos",
+    "Marca": "Black Tucano Coffee Roasters",
+    "Preco": 23.9
+  },
+  {
+    "Id": 3,
+    "Nome": "Black Tucano Honey Coffee - 250g",
+    "Imagem": "https://cdn.shopify.com/s/files/1/0167/0751/8528/products/HONEYCOFFEEFUNDOBRANCO_2048x2048.png?v=1620224421",
+    "Descricao": "Café exótico, tradicionalmente conhecido como 'café de mel', de origem única e processos nobres",
+    "Marca": "Black Tucano Coffee Roasters",
+    "Preco": 27.9
+  },
+  {
+    "Id": 4,
+    "Nome": "Black Tucano Fuity Coffee - 250g",
+    "Imagem": "https://cdn.shopify.com/s/files/1/0167/0751/8528/products/BLACKTUCANOFRUITYCOFFEEFRENTE1875x1579_2048x2048.png?v=1632362451",
+    "Descricao": "Café em edição limitadíssima, fermentado em barris de processamento exótico, possui aroma frutado e vinhoso",
+    "Marca": "Black Tucano Coffee Roasters",
+    "Preco": 34.9
+  },
+  {
+    "Id": 5,
+    "Nome": "Café Edição Especial Arara - 250g",
+    "Imagem": "https://cdn.shopify.com/s/files/1/0421/4764/3548/products/Arara250gGrao-Site.jpg?v=1630588587",
+    "Descricao": "Potência de sabor e notas de chocolate, caramelo, além de lembranças de frutas amarelas, trazendo equilíbrio, delicadeza e doçura natural",
+    "Marca": "Coffee +",
+    "Preco": 29.9
+  },
+  {
+    "Id": 6,
+    "Nome": "Café Geisha em Grãos - 250g",
+    "Imagem": "https://cdn.shopify.com/s/files/1/0421/4764/3548/products/cafe-especial-coffee-mais-geisha-coffee-mais-grao-250g.jpg?v=1631563115",
+    "Descricao": "Com notas sensoriais que lembram flores de jasmim, carambola madura, com acidez equilibrada de limão-taiti.",
+    "Marca": "Coffee +",
+    "Preco": 59.9
+  },
+  {
+    "Id": 7,
+    "Nome": "Café Cerrado Mineiro Grãos - 250g",
+    "Imagem": "https://cdn.shopify.com/s/files/1/0421/4764/3548/products/cafe-especial-coffee-mais-gabriel-nunes-cerrado-mineiro-coffee-mais-graos-250g.jpg?v=1631563068",
+    "Descricao": "Direto do Cerrado Mineiro, esse café tem notas sensoriais de doce de marmelo e frutas amarelas",
+    "Marca": "Coffee +",
+    "Preco": 22.9
+  },
+  {
+    "Id": 8,
+    "Nome": "Kit Geisha Drip Coffee + Caneca",
+    "Imagem": "https://cdn.shopify.com/s/files/1/0421/4764/3548/products/5.png?v=1634324739",
+    "Descricao": "Kit com 20 sachês do nosso Drip Coffee Geisha e mais uma caneca",
+    "Marca": "Coffee +",
+    "Preco": 94.3
+  },
+  {
+    "Id": 9,
+    "Nome": "Café Clássico Cápsulas - 20 unid",
+    "Imagem": "https://cdn.shopify.com/s/files/1/0421/4764/3548/products/capsula-classico.jpg?v=1601063834",
+    "Descricao": "Grãos produzidos por pessoas especiais, com notas sensoriais achocolatadas e intensidade",
+    "Marca": "Coffee +",
+    "Preco": 18.9
+  }
+]

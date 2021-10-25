@@ -1,15 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="font/fontawesome-free-5.15.4-web/css/all.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+    <!-- Smooth Scroll -->
+    <script>
+      $(document).ready(function () {
+        $('a').on('click', function (event) {
+          if (this.hash !== '') {
+            event.preventDefault();
+
+            var hash = this.hash;
+            var targetOffset = $(hash).offset().top - 56;
+
+            $('html, body').animate(
+              {
+                scrollTop: targetOffset,
+              },
+              400,
+              function () {
+                window.location.hash = hash - 100;
+              }
+            );
+          }
+        });
+      });
+    </script>
+    <!-- End Smooth Scroll -->
+
     <title>Mariana's Café</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div>
-      <h1 id="title"></h1>
+    <div class="header">
+      <a href="#section1" class="item">Clube da Mari</a>
+      <a href="#section2" class="item">Promoções</a>
+      <div class="logo">
+        <img src="img/logo_2.png" alt="" />
+      </div>
+      <a href="#section3" class="item">Nossos Produtos</a>
+      <a href="#section4" class="item">Equipe</a>
+
+      <a class="cart-icon" href="carrinho.html">
+        <img src="img/shopping-cart.png" alt="Carrinho" />
+        <span id="produtosQuant">(0)</span>
+      </a>
     </div>
+
+    <div class="container">
+      <div id="section1" class="section-1">
+        <div class="flex-3 lado-direito">
+          <h1>Clube da Mari</h1>
+          <h2>
+            Faça sua assinatura e receba café de qualidade na porta da sua casa
+            todo mês!
+          </h2>
+          <h2>
+            Escolha o tipo, a torra dos grãos e o tamanho do pacote, em seguida
+            nós selecionamos os melhores grãos dos produtores locais para sua
+            mesa.
+          </h2>
+          <button>Assinar</button>
+          <p>Planos mensais, semestrais e anuais.</p>
+          <h3>
+            * Na primeira assinatura, você recebe de brinde uma caneca para
+            tornar sua experiência ainda mais completa.
+          </h3>
+        </div>
+        <div class="flex-2 lado-esquerdo">
+          <div id="icon-container"></div>
+        </div>
+      </div>
+
+      <div id="section2" class="section-2">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="slide-content">
+              <div class="flex-1">
+                <div class="lado-direito">
+                  <h2>Café Black Tucano Premium Blend em grãos 250 g</h2>
+                  <p>
+                    Um blend para clientes especiais apreciadores de uma
+                    deliciosa combinação de cafés de diferentes origens.
+                  </p>
+                </div>
+              </div>
+              <div class="flex-1">
+                <img src="img/produtos/cafe-black-tucano-premium.png" alt="" />
+              </div>
+              <div class="flex-1">
+                <div class="lado-esquerdo">
+                  <p class="preco-anterior">R$ 45,90</p>
+                  <p class="preco-novo">R$ 25,90</p>
+                  <button onclick="adicionaProduto(1)">comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="slide-content">
+              <div class="flex-1">
+                <div class="lado-direito">
+                  <h2>Café Black Tucano Single Origin em grãos 250 g</h2>
+                  <p>
+                    O carro chefe da Black Tucano! Contempla os cafés de origem
+                    única, ou seja cultivados por uma única fazenda ou produtor.
+                  </p>
+                </div>
+              </div>
+              <div class="flex-1">
+                <img
+                  src="img/produtos/cafe-black-tucano-single-origin.png"
+                  alt=""
+                />
+              </div>
+              <div class="flex-1">
+                <div class="lado-esquerdo">
+                  <p class="preco-anterior">R$ 42,90</p>
+                  <p class="preco-novo">R$ 23,90</p>
+                  <button onclick="adicionaProduto(2)">comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">
+            <i class="fas fa-angle-left"></i>
+          </a>
+          <a class="next" onclick="plusSlides(1)">
+            <i class="fas fa-angle-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="section3" class="section-3">
+        <h1>Conheça nossos produtos</h1>
+        <table id="lista-produtos"></table>
+      </div>
+
+      <div id="section4" class="section-4">
+        <h1>Conheça nossa equipe</h1>
+        <div class="section-row">
+          <div class="flex-1 card-equipe">
+            <img src="img/luiz.jpg" alt="" />
+            <h2 class="card-title">Luiz Gustavo</h2>
+            <p class="card-text">
+              Pode se encontrar a felicidade mesmo nas horas mais sombrias, se a
+              pessoa se lembrar de acender a luz.
+            </p>
+            <div class="card-social">
+              <div class="flex-1"><img src="img/linked.png" alt="" /></div>
+              <div class="flex-1"><img src="img/wpp.png" alt="" /></div>
+              <div class="flex-1"><img src="img/twitter.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="flex-1 card-equipe">
+            <img src="img/mariana.jpg" alt="" />
+            <h2 class="card-title">Mariana Júlia</h2>
+            <p class="card-text">
+              Não desista, até que seus sonhos virem realidade. Apaixonada em
+              entregar a melhor experiência em cafés para nossos clientes.
+            </p>
+            <div class="card-social">
+              <div class="flex-1"><img src="img/linked.png" alt="" /></div>
+              <div class="flex-1"><img src="img/wpp.png" alt="" /></div>
+              <div class="flex-1"><img src="img/twitter.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="flex-1 card-equipe">
+            <img src="img/joao.jpg" alt="" />
+            <h2 class="card-title">João Carlos</h2>
+            <p class="card-text">
+              Um dia, todos esses momentos se perderão no tempo, como lágrimas
+              na chuva. Hora de tomar um café.
+            </p>
+            <div class="card-social">
+              <div class="flex-1"><img src="img/linked.png" alt="" /></div>
+              <div class="flex-1"><img src="img/wpp.png" alt="" /></div>
+              <div class="flex-1"><img src="img/twitter.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <img src="img/logo_1.png" alt="" />
+      <div class="mariana-cafe">
+        <h5>Mariana's Café</h5>
+        <h6>Perguntas Frequentes</h6>
+      </div>
+      <div class="termos">
+        <h5>Termos</h5>
+        <h6>Termos de Uso</h6>
+      </div>
+      <div class="empresa">
+        <h5>A Empresa</h5>
+        <h6>
+          Rua Santa Cruz, 546 Barroca, Belo Horizonte - MG (31) 99800-1607
+        </h6>
+      </div>
+    </div>
+
+    <h6 class="rights">2020 © Mariana’s Café. Todos os direitos reservados</h6>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      var animation = bodymovin.loadAnimation({
+        // animationData: { /* ... */ },
+        container: document.getElementById('icon-container'), // required
+        path: 'img/coffee.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: true, // optional
+        name: 'Demo Animation', // optional
+      });
+    </script>
   </body>
-  <script src="main.js"></script>
 </html>

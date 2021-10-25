@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/obrigado.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+    <title>Mariana's Café - Obrigado</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="card">
+        <h1>Muito Obrigado!</h1>
+
+        <p>Estamos processando seu pedido de número</p>
+        <span id="numPedido"></span>
+        <p>
+          Em breve iremos enviar para você, diretamente da nossa mais fina
+          coleção de grãos! <br /><br />
+          <b>Aproveite bastante o melhor sabor do café.</b>
+        </p>
+
+        <div class="icon-obrigado">
+          <div id="icon-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('numPedido').innerHTML =
+        '#' + Math.floor(Math.random() * (999999 - 100000));
+    </script>
+
+    <script>
+      // setTimeout(function () {
+      //   window.location.href = 'index.html';
+      // }, 8000);
+    </script>
+
+    <script>
+      var animation = bodymovin.loadAnimation({
+        // animationData: { /* ... */ },
+        container: document.getElementById('icon-container'), // required
+        path: 'img/coffee.json', // required
+        renderer: 'svg', // required
+        loop: true, // optional
+        autoplay: true, // optional
+        name: 'Demo Animation', // optional
+      });
+    </script>
+  </body>
+</html>
