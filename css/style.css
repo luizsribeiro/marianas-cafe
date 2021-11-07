@@ -481,6 +481,172 @@ button {
 
 /*#endregion SECTION 4 */
 
+
+/* SECTION 5 */
+
+.section-5 {
+  padding: 4vw 0;
+  text-align: center;
+}
+
+.section-5 .section-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  margin: 0 auto;
+  max-width: 57.7vw;
+}
+
+.section-5 .newsletter {
+  margin-top: 5%;
+}
+
+.section-5 .newsletter h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 39px;
+  line-height: 47px;
+  color: #383838;
+
+  margin-bottom: 8px;
+}
+
+.section-5 .newsletter h2 {
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 30px;
+  color: #585858;
+}
+
+.section-5 .newsletter button {
+  background-color: #ffffff;
+  border: 1px solid #a67851;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 13px;
+  width: 250px;
+  height: 52px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #a67851;
+}
+
+.popup{
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  margin: auto;
+  width: 700px;
+  height: 300px;
+  padding: 15px;
+  background-color: #fbcfad;
+  border-radius: 16px;
+  display: none;
+  }
+  
+  .popup button{
+    margin-top: 0;
+    float:right;
+    background-color: #a67851;
+    border: 1px solid #a67851;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+  
+  .popup h3 {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #383838;
+    margin-top: 25px;
+  }
+  
+  .popup .flex-row {
+    margin-bottom: 8px;
+  }
+  
+  .popup form {
+    border-radius: 16px;
+    padding: 30px 64px;
+  }
+
+  .popup form label {
+    width: 100%;
+    float: left;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    color: #383838;
+    margin-bottom: 9px;
+    margin-top: 9px;
+  }
+  
+  .popup form input {
+    width: 100%;
+    padding: 0 15px;
+    font-size: 15px;
+    min-height: 40px;
+    background: #ffffff;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  .popup form textarea {
+    width: 100%;
+    resize: none;
+    padding: 15px;
+    min-height: 200px;
+    background: #ffffff;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  
+  .popup form button {
+    background-color: #a67851;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 25px;
+    width: 120px;
+    height: 30px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+
+/*#endregion SECTION 5 */
+
 /*#region SECTION FOOTER */
 
 .footer {
