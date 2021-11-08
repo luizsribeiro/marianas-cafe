@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="font/fontawesome-free-5.15.4-web/css/all.css"
-      rel="stylesheet"
-    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -42,15 +38,21 @@
     
   </head>
 
-  <body>
+  <body onload="getUsuario()">
     <div class="header">
-      <a href="#section1" class="item">Clube da Mari</a>
-      <a href="#section2" class="item">Promoções</a>
       <div class="logo">
         <img src="img/logo_2.png" alt="" />
       </div>
+      <a href="#section1" class="item">Clube da Mari</a>
+      <a href="#section2" class="item">Promoções</a>
       <a href="#section3" class="item">Nossos Produtos</a>
       <a href="#section4" class="item">Equipe</a>
+
+      <a id="login" class="login" href="login.html">
+        <span id="loginId">Login</span>
+      </a>
+
+      <span id="usuarioLogado" class="usuariologado" hidden></span>
 
       <a class="cart-icon" href="carrinho.html">
         <img src="img/shopping-cart.png" alt="Carrinho" />

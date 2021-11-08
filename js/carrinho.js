@@ -151,7 +151,7 @@ function geraParcelas() {
         style: 'currency',
         currency: 'BRL',
       }) +
-      '. Sem juros.';
+      ', sem juros.';
 
     select.appendChild(option);
   }

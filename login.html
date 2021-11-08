@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+    <title>Mariana's Café - Login</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="card">
+        <div class="login-form">
+          <div id="login_div" class="main-div">
+            <h1 class="margin-bottom">Login</h1>
+            <input
+              type="email"
+              placeholder="Email"
+              class="margin-bottom"
+              id="email_field"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              class="margin-bottom"
+              id="password_field"
+            />
+
+            <div class="flex-row">
+              <button onclick="login()" style="margin-right: 12px">
+                Login
+              </button>
+              <button onclick="abrirFormRegistrar()">Cadastrar-se</button>
+            </div>
+          </div>
+        </div>
+        <div class="register-form">
+          <div id="resgister_div">
+            <h1 class="margin-bottom">Registrar</h1>
+            <div class="flex-row">
+              <div class="flex-1">
+                <input
+                  name="nome"
+                  type="text"
+                  id="nomeCompleto"
+                  placeholder="Nome completo"
+                />
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-1">
+                <input
+                  name="cpf"
+                  id="cpfMask"
+                  type="text"
+                  placeholder="CPF/CNPJ"
+                />
+              </div>
+              <div class="flex-1" style="margin-left: 30px">
+                <input
+                  name="telefone"
+                  id="telefoneMask"
+                  type="text"
+                  placeholder="Telefone"
+                />
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-1">
+                <input
+                  name="email"
+                  type="text"
+                  id="email"
+                  placeholder="E-mail"
+                />
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-2">
+                <input
+                  name="endereco"
+                  type="text"
+                  id="endereco"
+                  placeholder="Endereço"
+                />
+              </div>
+              <div class="flex-1" style="margin-left: 30px">
+                <input
+                  name="complemento"
+                  type="text"
+                  id="complemento"
+                  placeholder="Complemento"
+                />
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-1">
+                <input name="cep" id="cepMask" type="text" placeholder="CEP" />
+              </div>
+              <div class="flex-1" style="margin-left: 30px">
+                <select id="estado" name="estado">
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+                  <option value="EX">Estrangeiro</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-1">
+                <input
+                  name="cidade"
+                  type="text"
+                  id="cidade"
+                  placeholder="Cidade"
+                />
+              </div>
+              <div class="flex-1" style="margin-left: 30px">
+                <input
+                  name="bairro"
+                  type="text"
+                  id="bairro"
+                  placeholder="Bairro"
+                />
+              </div>
+            </div>
+
+            <hr style="margin: 15px 0" />
+
+            <div class="flex-column">
+              <div class="flex-1">
+                <input
+                  name="senha"
+                  type="password"
+                  id="senha"
+                  placeholder="Senha"
+                />
+              </div>
+              <div class="flex-1" style="margin: 15px 0">
+                <input
+                  name="repetirSenha"
+                  type="password"
+                  id="repetirSenha"
+                  placeholder="Repetir a senha"
+                />
+              </div>
+            </div>
+
+            <div class="flex-button">
+              <button id="signUp" onclick="registrarUsuario()">
+                Registrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/login.js"></script>
+
+    <script>
+      $("input[id*='cpfMask']").inputmask({
+        mask: ['999.999.999-99', '99.999.999/9999-99'],
+        keepStatic: true,
+      });
+
+      $("input[id*='telefoneMask']").inputmask({
+        mask: ['(99) 99999-9999'],
+        keepStatic: true,
+      });
+
+      $("input[id*='cepMask']").inputmask({
+        mask: ['99999-999'],
+        keepStatic: true,
+      });
+
+      $("input[id*='numCartao']").inputmask({
+        mask: ['9999 9999 9999 9999'],
+        keepStatic: true,
+      });
+
+      $("input[id*='dataVenc']").inputmask({
+        mask: ['99/99'],
+        keepStatic: true,
+      });
+
+      $("input[id*='codigoCartao']").inputmask({
+        mask: ['999'],
+        keepStatic: true,
+      });
+    </script>
+  </body>
+</html>

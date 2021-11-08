@@ -9,6 +9,16 @@ $.getJSON('../js/produtos/produtos.json', function (data) {
   exibeProdutos(data);
 });
 
+function getUsuario() {
+  let usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
+  if (usuario != undefined) {
+    document.getElementById('login').hidden = true;
+    let usuarioHtml = document.getElementById('usuarioLogado');
+    usuarioHtml.hidden = false;
+    usuarioHtml.innerHTML = usuario.nome;
+  }
+}
+
 function changeImage(e, numImg) {
   var elems = document.querySelector('.active');
   if (elems !== null && numImg !== '') {
@@ -154,16 +164,16 @@ function defineCarrinho() {
   }
 }
 
-function abrirPopup(){
-  document.getElementById('popup').style.display = "block";
+function abrirPopup() {
+  document.getElementById('popup').style.display = 'block';
 }
 
-function fecharPopup(){
-  document.getElementById('popup').style.display = "none";
+function fecharPopup() {
+  document.getElementById('popup').style.display = 'none';
 }
 
-function sucesso(){
-  alert("Assinatura realizada com sucesso!")
+function sucesso() {
+  alert('Assinatura realizada com sucesso!');
 }
 
 //Chat Suporte
@@ -178,3 +188,4 @@ function fecharForm() {
 function enviar() {
   alert("Recebemos sua mensagem, e logo retornaremos!");
 }
+
