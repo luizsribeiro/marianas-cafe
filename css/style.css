@@ -651,21 +651,23 @@ button {
 
  * {box-sizing: border-box;}
 
-/* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
-  background-color: #555;
+  background-color: #9b6b43;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
   color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.9;
   position: fixed;
   bottom: 23px;
   right: 28px;
-  width: 280px;
+  width: 212px;
 }
 
-/* The popup chat - hidden by default */
 .chat-popup {
   display: none;
   position: fixed;
@@ -673,52 +675,56 @@ button {
   right: 15px;
   border: 3px solid #f1f1f1;
   z-index: 9;
+  background: #fff;
+  border: 2px solid #dab693;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+  margin: 10px;
+  border-radius: 16px;
 }
 
-/* Add styles to the form container */
 .form-container {
   font-family: 'Poppins', sans-serif;
   max-width: 300px;
   padding: 10px;
   background-color: white;
+  border-radius: 16px;
 }
 
-/* Full-width textarea */
 .form-container textarea {
   font-family: 'Poppins', sans-serif;
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
-  background: #f1f1f1;
+  background: #f8f6f6;
   resize: none;
   min-height: 200px;
 }
 
-/* When the textarea gets focus, do something */
 .form-container textarea:focus {
-  background-color: #ddd;
+  background-color: #f8f6f6;
   outline: none;
 }
 
-/* Set a style for the submit/send button */
 .form-container .btn {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #fbcfad;
+  color: #000;
   padding: 16px 20px;
-  border: none;
+  border: #fff;
+  border-radius: 4px;
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
-  opacity: 0.8;
+  opacity: 0.9;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: red;
+  background-color: #9b6b43;
+  color: #fff;
 }
 
-/* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }

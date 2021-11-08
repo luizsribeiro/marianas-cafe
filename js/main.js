@@ -165,12 +165,16 @@ function fecharPopup(){
 function sucesso(){
   alert("Assinatura realizada com sucesso!")
 }
-//Chat Suporte
 
-function openForm() {
+//Chat Suporte
+function abrirForm() {
   document.getElementById("myForm").style.display = "block";
 }
 
-function closeForm() {
+function fecharForm() {
   document.getElementById("myForm").style.display = "none";
+}
+
+function enviar() {
+  alert("Recebemos sua mensagem, e logo retornaremos!");
 }

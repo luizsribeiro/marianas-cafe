@@ -244,15 +244,14 @@
 
  <!-- Suporte Chat -->
  
- <button class="open-button" onclick="openForm()">Suporte</button>
+ <button class="open-button" onclick="abrirForm()">Suporte</button>
  <div class="chat-popup" id="myForm">
-   <form action="/action_page.php" class="form-container"> 
-     <h2>Suporte Mariana's Café</h3>
-     <label for="msg"><b>Envie sua mensagem abaixo:</b></label>
-     <textarea placeholder="Type message.." name="msg" required></textarea>
- 
-     <button type="submit" class="btn">Enviar</button>
-     <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
+   <form class="form-container"> 
+     <h3>Suporte Mariana's Café</h3>
+     <label for="msg"><b> </b></label>
+     <textarea placeholder="Escreva sua mensagem aqui!" name="msg" ></textarea>
+     <button type="submit" class="btn" onclick="enviar()">Enviar</button>
+     <button type="button" class="btn cancel" onclick="fecharForm()">Fechar</button>
    </form>
  </div>
 
