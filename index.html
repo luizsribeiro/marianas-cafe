@@ -39,6 +39,7 @@
     <!-- End Smooth Scroll -->
 
     <title>Mariana's Café</title>
+    
   </head>
 
   <body>
@@ -215,6 +216,22 @@
 
     <h6 class="rights">2020 © Mariana’s Café. Todos os direitos reservados</h6>
 
+ <!-- Suporte Chat -->
+ 
+ <button class="open-button" onclick="openForm()">Suporte</button>
+ <div class="chat-popup" id="myForm">
+   <form action="/action_page.php" class="form-container"> 
+     <h2>Suporte Mariana's Café</h3>
+     <label for="msg"><b>Envie sua mensagem abaixo:</b></label>
+     <textarea placeholder="Type message.." name="msg" required></textarea>
+ 
+     <button type="submit" class="btn">Enviar</button>
+     <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
+   </form>
+ </div>
+
+
+
     <script src="js/main.js"></script>
 
     <script>
@@ -228,5 +245,7 @@
         name: 'Demo Animation', // optional
       });
     </script>
+
+
   </body>
 </html>

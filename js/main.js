@@ -153,3 +153,13 @@ function defineCarrinho() {
     document.getElementById('produtosQuant').innerHTML = '(' + total + ')';
   }
 }
+
+//Chat Suporte
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
