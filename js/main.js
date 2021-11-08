@@ -154,6 +154,17 @@ function defineCarrinho() {
   }
 }
 
+function abrirPopup(){
+  document.getElementById('popup').style.display = "block";
+}
+
+function fecharPopup(){
+  document.getElementById('popup').style.display = "none";
+}
+
+function sucesso(){
+  alert("Assinatura realizada com sucesso!")
+}
 //Chat Suporte
 
 function openForm() {

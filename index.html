@@ -196,6 +196,32 @@
       </div>
     </div>
 
+    <div id="section5" class="section-5">
+      <div class="section-row">
+        <div class="flex-1 newsletter">
+          <h1>Newsletter</h1>
+          <h2>
+            Quer saber mais sobre nossos produtos?
+            Assine a nossa newsletter e fique por dentro de todas as novidades, dicas e até mesmo promoções do Clube da Mari!
+          </h2>
+          <button onclick="abrirPopup()">Assinar</button>
+        </div>
+        <div id="popup" class="popup">
+          <button onclick="fecharPopup()">X</button>
+          <h3>Assine nossa newsletter para ficar por dentro de todas as novidades: </h3>
+          <form>
+              <label for="nome">Nome completo</label><br/>
+              <input name="nome" type="text" /><br/>
+              <label for="email">E-mail</label><br />
+              <input name="email" type="text" /><br/>
+              <span id="mensagem-erro"></span>
+              <button onclick="sucesso()">Enviar</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <div class="footer">
       <img src="img/logo_1.png" alt="" />
       <div class="mariana-cafe">
@@ -214,7 +240,7 @@
       </div>
     </div>
 
-    <h6 class="rights">2020 © Mariana’s Café. Todos os direitos reservados</h6>
+    <h6 class="rights">2021 © Mariana’s Café. Todos os direitos reservados</h6>
 
  <!-- Suporte Chat -->
  
