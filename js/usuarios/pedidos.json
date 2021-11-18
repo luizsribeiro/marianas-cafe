@@ -1,1 +1,33 @@
-[{}]
+[{
+    "id": 1,
+    "idUsuario": 1,
+    "status": "Enviado para entrega",
+    "data": "21/12/2021",
+    "total": 211.2,
+    "itens": [
+        {
+            "produtoId": 1,
+            "nome": "Black Tucano Premium Blend - 250g",
+            "imagem": "https://cdn.shopify.com/s/files/1/0167/0751/8528/products/PREMIUMBLENDFUNDOBRANCO_2048x2048.png?v=1620223951",
+            "preco": 25.9,
+            "quantidade": 4,
+            "total": 103.6
+        },
+        {
+            "produtoId": 2,
+            "nome": "Black Tucano Single Origin - 250g",
+            "imagem": "https://cdn.shopify.com/s/files/1/0167/0751/8528/products/SINGLEORIGINFUNDOBRANCO_2048x2048.png?v=1630526775",
+            "preco": 23.9,
+            "quantidade": 1,
+            "total": 23.9
+        },
+        {
+            "produtoId": 3,
+            "nome": "Black Tucano Honey Coffee - 250g",
+            "imagem": "https://cdn.shopify.com/s/files/1/0167/0751/8528/products/HONEYCOFFEEFUNDOBRANCO_2048x2048.png?v=1620224421",
+            "preco": 27.9,
+            "quantidade": 3,
+            "total": 83.7
+        }
+    ]
+}]

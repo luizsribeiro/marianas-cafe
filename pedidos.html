@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/pedidos.css" />
+    <title>Mariana's Café - Pedidos</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+          <img src="img/logo_2.png" alt="" />
+        </div>
+        <a href="#section1" class="item">Clube da Mari</a>
+        <a href="#section2" class="item">Promoções</a>
+        <a href="#section3" class="item">Nossos Produtos</a>
+        <a href="#section4" class="item">Equipe</a>
+  
+        <a id="login" class="login" href="login.html">
+          <span id="loginId">Login</span>
+        </a>
+  
+        <span id="usuarioLogado" class="usuariologado" hidden></span>
+  
+        <a class="cart-icon" href="carrinho.html">
+          <img src="img/shopping-cart.png" alt="Carrinho" />
+          <span id="produtosQuant">(0)</span>
+        </a>
+    </div>
+    <h1 class="title">Pedidos</h1>
+    <div id="pedidos">
+    </div>
+
+    <script src="./js/localstorage.js"></script>
+    <script src="./js/pedidos.js"></script>
+</body>
+</html>
